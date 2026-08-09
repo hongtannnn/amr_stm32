@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<robot name="ROS_Tang1_final" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<!-- Diff Drive plugin cho Gazebo Harmonic -->
+<gazebo>
+  <plugin filename="gz-sim-diff-drive-system"
+          name="gz::sim::systems::DiffDrive">
+    <left_joint>left_wheel_joint</left_joint>
+    <right_joint>right_wheel_joint</right_joint>
+    <wheel_separation>0.2925</wheel_separation>
+    <wheel_radius>0.034</wheel_radius>
+    <odom_publish_frequency>10</odom_publish_frequency>
+    <topic>cmd_vel</topic>
+    <odom_topic>odom</odom_topic>
+    <frame_id>odom</frame_id>
+    <child_frame_id>base_footprint</child_frame_id>
+  </plugin>
+</gazebo>
+
+<gazebo reference="base_link">
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="left_wheel_1">
+  <mu1>0.5</mu1>
+  <mu2>0.5</mu2>
+  <selfCollide>false</selfCollide>
+</gazebo>
+
+<gazebo reference="right_wheel_1">
+  <mu1>0.5</mu1>
+  <mu2>0.5</mu2>
+  <selfCollide>false</selfCollide>
+</gazebo>
+
+</robot>

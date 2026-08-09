@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot">
+
+    <xacro:include filename="$(find my_bot)/description/urdf/ROS_Tang1_final.xacro"/>
+
+</robot>
