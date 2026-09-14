@@ -40,6 +40,8 @@
         * EXTI
      PA0-WKUP   ------> S_TIM2_CH1_ETR
      PA1   ------> S_TIM2_CH2
+     PA2   ------> USART2_TX
+     PA3   ------> USART2_RX
      PA6   ------> S_TIM3_CH1
      PA7   ------> S_TIM3_CH2
      PC8   ------> S_TIM8_CH3
@@ -88,6 +90,14 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.Alternate = GPIO_AF1_TIM2;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PA2 PA3 */
+  GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  GPIO_InitStruct.Alternate = GPIO_AF7_USART2;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PA6 PA7 */
