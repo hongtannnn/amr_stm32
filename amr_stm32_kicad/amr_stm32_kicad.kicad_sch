@@ -9332,7 +9332,7 @@
 	)
 	(text "MCU CORE & Pi\n"
 		(exclude_from_sim no)
-		(at 411.48 281.432 0)
+		(at 382.778 294.894 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -9685,6 +9685,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7dca585d-adaf-412c-93cb-0756ec378acf")
+	)
+	(junction
+		(at 220.98 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7f174616-ef72-4dce-ae4d-1a12af62ec5f")
 	)
 	(junction
 		(at 88.9 133.35)
@@ -10376,13 +10382,23 @@
 	)
 	(wire
 		(pts
-			(xy 426.72 264.16) (xy 439.42 264.16)
+			(xy 421.64 259.08) (xy 434.34 259.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "12a10cbe-5fdf-4bdd-8639-0d68fd3bb6f8")
+	)
+	(wire
+		(pts
+			(xy 458.47 289.56) (xy 463.55 289.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1609f875-271d-4ba0-bead-7315ca3d8142")
 	)
 	(wire
 		(pts
@@ -10456,7 +10472,7 @@
 	)
 	(wire
 		(pts
-			(xy 452.12 261.62) (xy 458.47 261.62)
+			(xy 447.04 256.54) (xy 453.39 256.54)
 		)
 		(stroke
 			(width 0)
@@ -10786,13 +10802,23 @@
 	)
 	(wire
 		(pts
-			(xy 434.34 259.08) (xy 439.42 259.08)
+			(xy 429.26 254) (xy 434.34 254)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "2e1e82e0-691c-4f06-b9a1-b300035c3ee3")
+	)
+	(wire
+		(pts
+			(xy 458.47 279.4) (xy 463.55 279.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e47e85c-1b05-4828-97e5-baaa01bd29a7")
 	)
 	(wire
 		(pts
@@ -10986,6 +11012,16 @@
 	)
 	(wire
 		(pts
+			(xy 426.72 284.48) (xy 431.8 284.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37775963-bd1e-4d2b-9f74-93d211a73360")
+	)
+	(wire
+		(pts
 			(xy 81.28 119.38) (xy 81.28 121.92)
 		)
 		(stroke
@@ -11156,7 +11192,7 @@
 	)
 	(wire
 		(pts
-			(xy 452.12 264.16) (xy 458.47 264.16)
+			(xy 447.04 259.08) (xy 453.39 259.08)
 		)
 		(stroke
 			(width 0)
@@ -11363,6 +11399,16 @@
 			(type default)
 		)
 		(uuid "4e662f34-2035-4651-847b-925df04d4f42")
+	)
+	(wire
+		(pts
+			(xy 426.72 281.94) (xy 431.8 281.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f0a67cd-d809-4c47-b403-fb32e6781741")
 	)
 	(wire
 		(pts
@@ -11886,6 +11932,16 @@
 	)
 	(wire
 		(pts
+			(xy 220.98 46.99) (xy 229.87 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c6a58a4-8962-4978-9ec7-724e0cfd9482")
+	)
+	(wire
+		(pts
 			(xy 140.97 109.22) (xy 140.97 113.03)
 		)
 		(stroke
@@ -11906,7 +11962,7 @@
 	)
 	(wire
 		(pts
-			(xy 452.12 256.54) (xy 458.47 256.54)
+			(xy 447.04 251.46) (xy 453.39 251.46)
 		)
 		(stroke
 			(width 0)
@@ -11926,7 +11982,7 @@
 	)
 	(wire
 		(pts
-			(xy 434.34 261.62) (xy 439.42 261.62)
+			(xy 429.26 256.54) (xy 434.34 256.54)
 		)
 		(stroke
 			(width 0)
@@ -12036,6 +12092,16 @@
 	)
 	(wire
 		(pts
+			(xy 458.47 281.94) (xy 463.55 281.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75166a23-6be5-4c02-bb80-038be4fbf332")
+	)
+	(wire
+		(pts
 			(xy 288.29 198.12) (xy 293.37 198.12)
 		)
 		(stroke
@@ -12103,6 +12169,16 @@
 			(type default)
 		)
 		(uuid "798ec9eb-fa55-4142-9802-25141fba67b6")
+	)
+	(wire
+		(pts
+			(xy 426.72 289.56) (xy 431.8 289.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "799ad665-2e44-4521-b738-683758ff380b")
 	)
 	(wire
 		(pts
@@ -12216,7 +12292,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 45.72) (xy 220.98 54.61)
+			(xy 220.98 45.72) (xy 220.98 46.99)
 		)
 		(stroke
 			(width 0)
@@ -12633,6 +12709,16 @@
 			(type default)
 		)
 		(uuid "95df4097-bedf-4dd0-9271-e7a51012eea7")
+	)
+	(wire
+		(pts
+			(xy 426.72 287.02) (xy 431.8 287.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95e3570b-7fc4-47ca-8d17-422479e6e9d3")
 	)
 	(wire
 		(pts
@@ -13106,6 +13192,16 @@
 	)
 	(wire
 		(pts
+			(xy 458.47 284.48) (xy 463.55 284.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2e41af2-2169-4547-87a9-0ce49754167e")
+	)
+	(wire
+		(pts
 			(xy 173.99 52.07) (xy 177.8 52.07)
 		)
 		(stroke
@@ -13173,6 +13269,16 @@
 			(type default)
 		)
 		(uuid "b806fba4-d203-4f6d-8b18-d935ff65dd3e")
+	)
+	(wire
+		(pts
+			(xy 220.98 46.99) (xy 220.98 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba76a056-190c-4fff-871f-aeb3efed5569")
 	)
 	(wire
 		(pts
@@ -13656,7 +13762,7 @@
 	)
 	(wire
 		(pts
-			(xy 434.34 256.54) (xy 439.42 256.54)
+			(xy 429.26 251.46) (xy 434.34 251.46)
 		)
 		(stroke
 			(width 0)
@@ -13716,7 +13822,7 @@
 	)
 	(wire
 		(pts
-			(xy 452.12 259.08) (xy 458.47 259.08)
+			(xy 447.04 254) (xy 453.39 254)
 		)
 		(stroke
 			(width 0)
@@ -13753,6 +13859,16 @@
 			(type default)
 		)
 		(uuid "de2e2be5-010e-4824-8e71-5377d2e73f94")
+	)
+	(wire
+		(pts
+			(xy 458.47 292.1) (xy 463.55 292.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df22b429-d221-44cb-a7bb-182590c6380c")
 	)
 	(wire
 		(pts
@@ -13903,6 +14019,16 @@
 			(type default)
 		)
 		(uuid "e44907f8-26c6-4179-8cd7-452ea796db68")
+	)
+	(wire
+		(pts
+			(xy 458.47 287.02) (xy 463.55 287.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4d35e7d-130b-4294-8f38-08cca6a28f5a")
 	)
 	(wire
 		(pts
@@ -14354,6 +14480,36 @@
 		)
 		(uuid "ff5805b2-c867-47bc-8d29-f386ad612cd0")
 	)
+	(label "5V"
+		(at 463.55 279.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "01e5bd7b-411c-45a6-8f92-34033b38e063")
+	)
+	(label "GND"
+		(at 463.55 289.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "094fbe89-6130-4aa5-a2ba-7387401ea5f7")
+	)
+	(label "5V"
+		(at 229.87 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0ac880c4-f0b3-4a7b-a218-917b8a37907c")
+	)
 	(label "USB_DM"
 		(at 368.3 218.44 0)
 		(effects
@@ -14494,6 +14650,16 @@
 		)
 		(uuid "2659808a-e50b-4405-94e8-56a66dc80746")
 	)
+	(label "GND"
+		(at 431.8 287.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "27e785d8-f1c5-4304-94ac-bfcd88b2aecb")
+	)
 	(label "USART2_RX"
 		(at 368.3 198.12 0)
 		(effects
@@ -14595,7 +14761,7 @@
 		(uuid "37c32511-6148-477a-928b-5dca80a207c9")
 	)
 	(label "GND"
-		(at 434.34 259.08 0)
+		(at 429.26 254 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -14705,7 +14871,7 @@
 		(uuid "493c59cd-07f7-47cc-ace9-18e84778a33f")
 	)
 	(label "VBUS"
-		(at 458.47 264.16 0)
+		(at 453.39 259.08 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -14713,6 +14879,16 @@
 			(justify left bottom)
 		)
 		(uuid "499f19ef-23be-4f69-b5e8-9416a98b43ea")
+	)
+	(label "USART3_TX"
+		(at 431.8 281.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4a983f4f-3d2f-4ab9-b252-d951d0745d68")
 	)
 	(label "GND"
 		(at 459.74 226.06 0)
@@ -14754,6 +14930,16 @@
 		)
 		(uuid "4fa866f5-d01e-4391-bf35-b0a656126fa5")
 	)
+	(label "3.3V"
+		(at 463.55 284.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "500a32b4-fcc8-4a6f-a641-fb531a17d639")
+	)
 	(label "STM32_RESET"
 		(at 274.32 125.73 0)
 		(effects
@@ -14775,7 +14961,7 @@
 		(uuid "53b7e633-d0d9-4cb7-8895-ec591d100e15")
 	)
 	(label "STM32_RESET"
-		(at 426.72 264.16 0)
+		(at 421.64 259.08 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -14783,6 +14969,16 @@
 			(justify left bottom)
 		)
 		(uuid "55a9d70e-f099-45f7-a6e8-794ea7bc3b3f")
+	)
+	(label "5V"
+		(at 431.8 289.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "55af8900-ea54-4738-a1cd-bf5e15447369")
 	)
 	(label "USB_DM"
 		(at 77.47 208.28 0)
@@ -14794,7 +14990,7 @@
 		)
 		(uuid "56ed0b6c-ebb2-48c7-a18e-addbaff34a58")
 	)
-	(label "PC10"
+	(label "USART3_TX"
 		(at 300.99 238.76 0)
 		(effects
 			(font
@@ -15024,7 +15220,7 @@
 		)
 		(uuid "84412db8-5e27-4f2f-be8e-85a42203f5f1")
 	)
-	(label "PC11"
+	(label "USART3_RX"
 		(at 300.99 241.3 0)
 		(effects
 			(font
@@ -15035,7 +15231,7 @@
 		(uuid "873c46f6-ed29-49e9-a877-8fb418b16924")
 	)
 	(label "STM32_SWCLK"
-		(at 458.47 259.08 0)
+		(at 453.39 254 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -15043,6 +15239,16 @@
 			(justify left bottom)
 		)
 		(uuid "88f7c4fb-c492-4b2d-8c47-eb94ef2df235")
+	)
+	(label "USART3_RX"
+		(at 431.8 284.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8b981f11-66c7-424a-837e-df51cf66e0d7")
 	)
 	(label "PC4"
 		(at 300.99 223.52 0)
@@ -15145,7 +15351,7 @@
 		(uuid "a54bb404-139d-4ec3-9e5f-a844b6cca648")
 	)
 	(label "STM32_SWDIO"
-		(at 458.47 261.62 0)
+		(at 453.39 256.54 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -15175,7 +15381,7 @@
 		(uuid "b10ca670-3e0a-436a-b0ef-5d9ef5fba96b")
 	)
 	(label "GND"
-		(at 434.34 261.62 0)
+		(at 429.26 256.54 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -15193,6 +15399,16 @@
 			(justify left bottom)
 		)
 		(uuid "b2cfdea2-3ecb-478a-a51d-25f0be17f774")
+	)
+	(label "GND"
+		(at 463.55 292.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b8865817-bb62-41d4-b5c8-1fa21d9fbf5b")
 	)
 	(label "PB12"
 		(at 368.3 264.16 0)
@@ -15213,6 +15429,16 @@
 			(justify left bottom)
 		)
 		(uuid "bb82b593-bf0c-46c6-8f38-fdbf27d7f352")
+	)
+	(label "3.3V"
+		(at 463.55 287.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "be1d5ad7-a978-432b-bbf6-41edebe0ccf1")
 	)
 	(label "STM32_PWMA"
 		(at 300.99 233.68 0)
@@ -15235,7 +15461,7 @@
 		(uuid "c669c03b-4952-42a5-834d-45348205d705")
 	)
 	(label "GND"
-		(at 434.34 256.54 0)
+		(at 429.26 251.46 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -15504,6 +15730,16 @@
 		)
 		(uuid "eb0f0739-aea6-4e67-a23d-592403c203d4")
 	)
+	(label "5V"
+		(at 463.55 281.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ec369766-98aa-4857-8d89-75486bb0212b")
+	)
 	(label "LED_RUN"
 		(at 368.3 236.22 0)
 		(effects
@@ -15565,7 +15801,7 @@
 		(uuid "f6f3756b-201f-4e15-9b08-6176aa55186b")
 	)
 	(label "GND"
-		(at 458.47 256.54 0)
+		(at 453.39 251.46 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17167,7 +17403,7 @@
 				)
 			)
 		)
-		(property "Value" "MB"
+		(property "Value" "Motor_right"
 			(at 449.58 62.23 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17259,7 +17495,7 @@
 				)
 			)
 		)
-		(property "Value" "MA"
+		(property "Value" "Motor_Left"
 			(at 449.58 31.75 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17331,7 +17567,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_02x04_Odd_Even")
-		(at 444.5 259.08 0)
+		(at 439.42 254 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17342,7 +17578,7 @@
 		(fields_autoplaced yes)
 		(uuid "20b34daa-af80-410e-8c5e-ae1d49e5691f")
 		(property "Reference" "J4"
-			(at 445.77 250.19 0)
+			(at 440.69 245.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17352,7 +17588,7 @@
 			)
 		)
 		(property "Value" "ST_Link"
-			(at 445.77 252.73 0)
+			(at 440.69 247.65 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17362,7 +17598,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Horizontal"
-			(at 444.5 259.08 0)
+			(at 439.42 254 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17373,7 +17609,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 444.5 259.08 0)
+			(at 439.42 254 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17384,7 +17620,7 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 444.5 259.08 0)
+			(at 439.42 254 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17612,7 +17848,7 @@
 				)
 			)
 		)
-		(property "Value" "D_Schottky 5A/40V"
+		(property "Value" "D_Schottky 1A/40V"
 			(at 68.2625 105.41 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17622,7 +17858,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMC"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 68.58 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -17942,6 +18178,98 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x06")
+		(at 421.64 287.02 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2caabecf-3620-4b72-a346-489db746e069")
+		(property "Reference" "J9"
+			(at 421.64 273.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "UART"
+			(at 421.64 275.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical"
+			(at 421.64 287.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 421.64 287.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 421.64 287.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4efae8ae-db84-47a8-9574-fcef6a724ad0")
+		)
+		(pin "3"
+			(uuid "ffbd6a45-b68f-4eb0-8543-6f2c1184200e")
+		)
+		(pin "4"
+			(uuid "0518c45d-c50d-4bbb-8aa7-43595f5b262a")
+		)
+		(pin "2"
+			(uuid "5d08424e-7f3d-4dec-af42-5c7b9e85b58d")
+		)
+		(pin "6"
+			(uuid "2bced3f3-cd5d-477e-a969-1e48c7da004e")
+		)
+		(pin "5"
+			(uuid "63e5a573-210a-469f-a041-994debe924a5")
+		)
+		(instances
+			(project "amr_stm32_kicad"
+				(path "/cf072b7b-77da-4611-a2b1-45164595d9a3"
+					(reference "J9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:USB_A")
 		(at 189.23 223.52 270)
 		(unit 1)
@@ -17954,23 +18282,25 @@
 		(fields_autoplaced yes)
 		(uuid "2e2bef16-875c-499f-a486-fa58e1d4548d")
 		(property "Reference" "J8"
-			(at 201.93 223.52 0)
+			(at 198.12 222.2499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "USB_A"
-			(at 199.39 223.52 0)
+		(property "Value" "USB_A_Pi"
+			(at 198.12 224.7899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Connector_USB:USB_A_Molex_67643_Horizontal"
@@ -25897,6 +26227,98 @@
 			(project "amr_stm32_kicad"
 				(path "/cf072b7b-77da-4611-a2b1-45164595d9a3"
 					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x06")
+		(at 453.39 287.02 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cb9d2f84-a1a2-49f0-a15e-85379cf9d48a")
+		(property "Reference" "J10"
+			(at 453.39 273.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCC"
+			(at 453.39 275.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical"
+			(at 453.39 287.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 453.39 287.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 453.39 287.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8b113d91-8400-4b83-8b35-c44c92a1f13e")
+		)
+		(pin "3"
+			(uuid "56d2511b-b347-43b5-a934-d0c1e143b85a")
+		)
+		(pin "4"
+			(uuid "d57ef786-0b4b-4464-8e49-8e8e7ac5fcdf")
+		)
+		(pin "2"
+			(uuid "6491db3a-3383-4704-ae56-0a066e9c872a")
+		)
+		(pin "6"
+			(uuid "ecdb0487-b569-4888-ae24-62db04698fda")
+		)
+		(pin "5"
+			(uuid "c54ec2a1-adbe-49a8-805e-b3e813dc62b4")
+		)
+		(instances
+			(project "amr_stm32_kicad"
+				(path "/cf072b7b-77da-4611-a2b1-45164595d9a3"
+					(reference "J10")
 					(unit 1)
 				)
 			)
