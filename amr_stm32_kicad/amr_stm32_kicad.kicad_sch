@@ -9471,6 +9471,12 @@
 		(uuid "1279a070-fedf-4bd7-baae-ea17fbd5be36")
 	)
 	(junction
+		(at 425.45 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "14055b49-0738-4bfa-a3dc-367885ea7ad7")
+	)
+	(junction
 		(at 100.33 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9487,18 +9493,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1dc632d8-ef7b-4433-be51-1716dca7cbbd")
-	)
-	(junction
-		(at 78.74 35.56)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1f6226da-a2e8-44ee-8af5-f386a8ff1186")
-	)
-	(junction
-		(at 78.74 45.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "25c44594-aa10-4c49-9f93-bf9a1df6a3b8")
 	)
 	(junction
 		(at 66.04 213.36)
@@ -9541,6 +9535,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "33e43aaa-7562-472f-92e4-d15ed84fadfb")
+	)
+	(junction
+		(at 425.45 29.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "353b3f02-24b3-4aca-82de-e8b228032ae8")
 	)
 	(junction
 		(at 86.36 177.8)
@@ -9733,6 +9733,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "87d079de-9654-49dd-be34-d82eb9204809")
+	)
+	(junction
+		(at 78.74 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "89b788c1-4859-4614-a99c-627c514a2eb2")
+	)
+	(junction
+		(at 78.74 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8a0d8515-c144-4142-bd2f-e12f6bbb1536")
 	)
 	(junction
 		(at 293.37 35.56)
@@ -10452,7 +10464,7 @@
 	)
 	(wire
 		(pts
-			(xy 419.1 38.1) (xy 431.8 38.1)
+			(xy 419.1 38.1) (xy 425.45 38.1)
 		)
 		(stroke
 			(width 0)
@@ -10929,6 +10941,16 @@
 			(type default)
 		)
 		(uuid "3374557d-8af8-4640-a8bb-df1d832cdb59")
+	)
+	(wire
+		(pts
+			(xy 425.45 30.48) (xy 425.45 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33d6846c-939d-4849-86a6-c627c54250c2")
 	)
 	(wire
 		(pts
@@ -11799,6 +11821,16 @@
 			(type default)
 		)
 		(uuid "63574311-7a85-46b3-8ce3-1045c4204e13")
+	)
+	(wire
+		(pts
+			(xy 425.45 29.21) (xy 431.8 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64e8cb6a-2147-4d4f-9c85-f4bf95e41584")
 	)
 	(wire
 		(pts
@@ -13762,6 +13794,16 @@
 	)
 	(wire
 		(pts
+			(xy 425.45 38.1) (xy 431.8 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8381f75-b3fe-4f16-b31b-68f8c0cc8076")
+	)
+	(wire
+		(pts
 			(xy 429.26 251.46) (xy 434.34 251.46)
 		)
 		(stroke
@@ -14212,7 +14254,7 @@
 	)
 	(wire
 		(pts
-			(xy 419.1 29.21) (xy 431.8 29.21)
+			(xy 419.1 29.21) (xy 425.45 29.21)
 		)
 		(stroke
 			(width 0)
@@ -14900,7 +14942,7 @@
 		)
 		(uuid "4bb2f868-5592-4ef8-a308-17d0dc4527fe")
 	)
-	(label "PB11"
+	(label "STM32_PWMB"
 		(at 368.3 261.62 0)
 		(effects
 			(font
@@ -15030,7 +15072,7 @@
 		)
 		(uuid "5b0b866c-54cd-4822-8bfa-ec726ffcc0cc")
 	)
-	(label "PB10"
+	(label "STM32_PWMA"
 		(at 368.3 259.08 0)
 		(effects
 			(font
@@ -15370,7 +15412,7 @@
 		)
 		(uuid "acd85d71-e053-4e52-ae75-50ed8902ff06")
 	)
-	(label "STM32_PWMB"
+	(label "PC9"
 		(at 300.99 236.22 0)
 		(effects
 			(font
@@ -15440,7 +15482,7 @@
 		)
 		(uuid "be1d5ad7-a978-432b-bbf6-41edebe0ccf1")
 	)
-	(label "STM32_PWMA"
+	(label "PC8"
 		(at 300.99 233.68 0)
 		(effects
 			(font
@@ -15869,6 +15911,87 @@
 			(justify left bottom)
 		)
 		(uuid "fc84d93b-3f70-4966-81ed-462f3acae955")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 425.45 34.29 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00524d82-89c3-490a-9e48-ac60f84c92e7")
+		(property "Reference" "C49"
+			(at 429.26 33.0199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF/50V"
+			(at 417.83 26.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 426.4152 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 425.45 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 425.45 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8c350aaa-8600-4e6f-8c39-871821a0d6e0")
+		)
+		(pin "2"
+			(uuid "c356252e-640d-40c1-a461-0103f773f4fc")
+		)
+		(instances
+			(project "amr_stm32_kicad"
+				(path "/cf072b7b-77da-4611-a2b1-45164595d9a3"
+					(reference "C49")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R")
