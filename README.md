@@ -8,7 +8,7 @@ A low-level controller board and hardware system designed as the foundation for 
 
 ## 📸 3D Render
 
-![AMR STM32 3D Render](amr_stm32f405rgt6_pcb.png)
+![AMR STM32 3D Render](amr_stm32f405rgt6_pcb.jpg)
 *Completed PCB design featuring peripheral connectors, power supply block, and central microcontroller.*
 
 ## 🚀 Hardware Features
