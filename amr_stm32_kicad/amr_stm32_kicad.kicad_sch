@@ -26269,7 +26269,7 @@
 				)
 			)
 		)
-		(property "Footprint" "BMI323:BMI323_BOS"
+		(property "Footprint" "BMI323:BMI323_BOS-L"
 			(at 209.55 134.62 0)
 			(hide yes)
 			(show_name no)
