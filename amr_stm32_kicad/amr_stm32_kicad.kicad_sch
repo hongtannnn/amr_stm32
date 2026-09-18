@@ -14722,7 +14722,7 @@
 		)
 		(uuid "29019cdc-5696-4edc-ab40-2628a3e206fa")
 	)
-	(label "LED_ERR"
+	(label "PB2"
 		(at 368.3 238.76 0)
 		(effects
 			(font
@@ -15112,7 +15112,7 @@
 		)
 		(uuid "6212bf41-dec4-48fb-8489-827fa7d109da")
 	)
-	(label "PC5"
+	(label "LED_ERR"
 		(at 300.99 226.06 0)
 		(effects
 			(font
@@ -15292,7 +15292,7 @@
 		)
 		(uuid "8b981f11-66c7-424a-837e-df51cf66e0d7")
 	)
-	(label "PC4"
+	(label "LED_RUN"
 		(at 300.99 223.52 0)
 		(effects
 			(font
@@ -15782,7 +15782,7 @@
 		)
 		(uuid "ec369766-98aa-4857-8d89-75486bb0212b")
 	)
-	(label "LED_RUN"
+	(label "PB1"
 		(at 368.3 236.22 0)
 		(effects
 			(font
