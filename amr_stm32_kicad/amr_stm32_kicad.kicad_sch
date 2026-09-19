@@ -11180,16 +11180,6 @@
 	)
 	(wire
 		(pts
-			(xy 424.18 198.12) (xy 439.42 198.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3f9f5fd6-8042-43ca-b394-d25e3545dae5")
-	)
-	(wire
-		(pts
 			(xy 358.14 259.08) (xy 368.3 259.08)
 		)
 		(stroke
@@ -13780,16 +13770,6 @@
 	)
 	(wire
 		(pts
-			(xy 424.18 200.66) (xy 439.42 200.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d57be221-8eb1-45c3-ab72-f1a876bee031")
-	)
-	(wire
-		(pts
 			(xy 209.55 54.61) (xy 209.55 59.69)
 		)
 		(stroke
@@ -14818,16 +14798,6 @@
 		)
 		(uuid "2e3303bf-fe9e-438e-9e96-8db02fb5e1fb")
 	)
-	(label "STM32_RESET"
-		(at 424.18 198.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2ee9f651-66a9-446b-bac9-77748bcefdc7")
-	)
 	(label "UART_DP"
 		(at 120.65 283.21 0)
 		(effects
@@ -15427,16 +15397,6 @@
 			(justify left bottom)
 		)
 		(uuid "9edc7896-4f63-4116-8dbf-7e05904b343a")
-	)
-	(label "STM32_BOOT"
-		(at 424.18 200.66 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a1e5991b-ca3a-4901-90d0-ac57224962e7")
 	)
 	(label "GND"
 		(at 424.18 195.58 0)
