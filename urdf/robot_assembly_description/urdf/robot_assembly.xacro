@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+<robot name="robot_assembly" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find robot_assembly_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find robot_assembly_description)/urdf/robot_assembly.trans" />
+<xacro:include filename="$(find robot_assembly_description)/urdf/robot_assembly.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.0001801031310621884 0.00025924195261079174 0.003832242271524391" rpy="0 0 0"/>
+    <mass value="5.341870907493194"/>
+    <inertia ixx="0.025638" iyy="0.018383" izz="0.041044" ixy="-6.3e-05" iyz="-1.6e-05" ixz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot_assembly_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot_assembly_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1_1">
+  <inertial>
+    <origin xyz="-0.009252274703491131 -4.414402370967493e-06 -5.315775120334765e-06" rpy="0 0 0"/>
+    <mass value="0.2717966197109235"/>
+    <inertia ixx="0.0002" iyy="0.000119" izz="0.000119" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.090987 -0.000611 0.016569" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot_assembly_description/meshes/left_wheel_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.090987 -0.000611 0.016569" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot_assembly_description/meshes/left_wheel_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin xyz="0.009252355095506246 -6.634310137020602e-06 -2.4158363846199515e-07" rpy="0 0 0"/>
+    <mass value="0.2717966197108583"/>
+    <inertia ixx="0.0002" iyy="0.000119" izz="0.000119" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.090987 -0.000611 0.016569" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot_assembly_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.090987 -0.000611 0.016569" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot_assembly_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Tang2_24cm_ComponentPi_1_1">
+  <inertial>
+    <origin xyz="0.0011619472588145366 0.00037962234624636104 0.04981801224075864" rpy="0 0 0"/>
+    <mass value="3.7734661537037937"/>
+    <inertia ixx="0.016801" iyy="0.01713" izz="0.032625" ixy="3e-06" iyz="1.4e-05" ixz="4e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.0 -0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot_assembly_description/meshes/Tang2_24cm_ComponentPi_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.0 -0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot_assembly_description/meshes/Tang2_24cm_ComponentPi_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Tang3_24cm_ComponentLidar_1_1">
+  <inertial>
+    <origin xyz="-0.0002176504381086913 -0.0033925161264463212 0.09435239830255189" rpy="0 0 0"/>
+    <mass value="2.3189387029545405"/>
+    <inertia ixx="0.007248" iyy="0.006946" izz="0.013375" ixy="3e-06" iyz="8.5e-05" ixz="8e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.0 -0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot_assembly_description/meshes/Tang3_24cm_ComponentLidar_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.0 -0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot_assembly_description/meshes/Tang3_24cm_ComponentLidar_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Revolute 9" type="continuous">
+  <origin xyz="-0.090987 0.000611 -0.016569" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_1_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Revolute 10" type="continuous">
+  <origin xyz="0.090987 0.000611 -0.016569" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rigid 11" type="fixed">
+  <origin xyz="0.0 0.0 0.007" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Tang2_24cm_ComponentPi_1_1"/>
+</joint>
+
+<joint name="Rigid 12" type="fixed">
+  <origin xyz="0.0 0.0 0.007" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Tang3_24cm_ComponentLidar_1_1"/>
+</joint>
+
+</robot>
