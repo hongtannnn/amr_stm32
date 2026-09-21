@@ -154,10 +154,6 @@
           ""
         ],
         [
-          "silk_overlap|163192914|64386899|8f375f4e-634b-4c9d-948a-a4e1d06c658d|cb7760df-407d-48a0-9ccd-62b03ca96c53",
-          ""
-        ],
-        [
           "silk_overlap|177562645|83479496|a0d59980-6726-49dd-b167-a7f5869fb91d|ae7f450e-80a9-4376-9cdc-dabe15b5894d",
           ""
         ],
@@ -650,7 +646,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "jpl_amr/",
+      "plot": "amr_board/",
       "specctra_dsn": "",
       "vrml": ""
     },
@@ -782,7 +778,7 @@
         "uuid": "cf072b7b-77da-4611-a2b1-45164595d9a3"
       }
     ],
-    "used_designators": "Y2,R29-31,J9-10,C49,D7",
+    "used_designators": "Y2,R29-31,J9-10,C49,#PWR8,D7",
     "variants": []
   },
   "sheets": [
