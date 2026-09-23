@@ -15940,7 +15940,7 @@
 		(dnp no)
 		(uuid "00524d82-89c3-490a-9e48-ac60f84c92e7")
 		(property "Reference" "C49"
-			(at 429.26 33.0199 0)
+			(at 424.942 40.894 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15951,7 +15951,7 @@
 			)
 		)
 		(property "Value" "100nF/50V"
-			(at 417.83 26.67 0)
+			(at 419.1 26.416 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16317,7 +16317,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 66.294 42.672 0)
+			(at 80.264 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21780,7 +21780,7 @@
 				)
 			)
 		)
-		(property "Value" "SGM2205-3.3"
+		(property "Value" "AP2112K-3.3"
 			(at 68.58 115.57 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25806,7 +25806,7 @@
 				)
 			)
 		)
-		(property "Value" "1kOhm"
+		(property "Value" "300Ohm"
 			(at 96.52 115.57 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26565,7 +26565,7 @@
 		(dnp no)
 		(uuid "cbdf70ed-5ef9-4c9f-a8b8-d0835a29325a")
 		(property "Reference" "C19"
-			(at 422.91 33.0199 0)
+			(at 416.052 41.148 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -26576,7 +26576,7 @@
 			)
 		)
 		(property "Value" "100nF/50V"
-			(at 411.48 26.67 0)
+			(at 403.86 25.908 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
