@@ -1198,6 +1198,17 @@
 				(xyz 0 0 0)
 			)
 		)
+		(model "C:/Users/ADMIN/Desktop/sop-8-package-1.snapshot.2/SOP-8.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 90)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0805_2012Metric"
 		(layer "F.Cu")
@@ -2957,6 +2968,17 @@
 			)
 			(rotate
 				(xyz 0 0 0)
+			)
+		)
+		(model "C:/Users/ADMIN/Desktop/type-c-31-m-12-1.snapshot.5/HRO_TYPE-C-31-M-12.step"
+			(offset
+				(xyz -4.5 -3.8 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
 			)
 		)
 	)
@@ -9547,6 +9569,17 @@
 				(xyz 0 0 0)
 			)
 		)
+		(model "C:/Users/ADMIN/Desktop/xt60pw-m-1.snapshot.1/XT60PW-M.STEP"
+			(offset
+				(xyz 11.5 -2 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 180 -0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0805_2012Metric"
 		(layer "F.Cu")
@@ -10319,6 +10352,17 @@
 			)
 			(rotate
 				(xyz 0 0 0)
+			)
+		)
+		(model "C:/Users/ADMIN/Desktop/inductor-7-3x7-3-7373-2929-1.snapshot.1/Library.pretty/INDUCTOR_73x73h5.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
 			)
 		)
 	)
@@ -13173,6 +13217,17 @@
 				(xyz 0 0 0)
 			)
 		)
+		(model "C:/Users/ADMIN/Desktop/crystal_smd_5032-2pin_5-0x3-2mm-1.snapshot.3/Crystal_SMD_5032-4Pin_5.0x3.2mm.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "BMI323:BMI323_BOS-L"
 		(layer "F.Cu")
@@ -14143,6 +14198,17 @@
 			(uuid "774bcae1-64a1-40e1-be3e-9e08d7d60584")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/ADMIN/Desktop/lga-14-2-5x3-1.snapshot.1/LGA-14(2.5x3).step"
+			(offset
+				(xyz 0 -0.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
 	)
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "F.Cu")
@@ -21444,6 +21510,17 @@
 			)
 			(rotate
 				(xyz 0 0 0)
+			)
+		)
+		(model "C:/Users/ADMIN/Desktop/type-c-31-m-12-1.snapshot.5/HRO_TYPE-C-31-M-12.step"
+			(offset
+				(xyz -4.5 -3.8 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
 			)
 		)
 	)
@@ -33286,44 +33363,36 @@
 		(uuid "f321cfb4-b2ed-460f-853a-91d835e48abe")
 	)
 	(segment
-		(start 193.75 90.5)
-		(end 194.5 91.25)
+		(start 194.5 90.5)
+		(end 194.6 90.4)
 		(width 0.25)
 		(layer "F.Cu")
 		(net "/USB_DM")
-		(uuid "112eebb2-9f67-4c42-ba31-e817dc3eb119")
+		(uuid "0dafc0b2-b6b1-45a1-8415-715ec09fd793")
 	)
 	(segment
 		(start 190.75 90.5)
-		(end 193.75 90.5)
+		(end 194.5 90.5)
 		(width 0.25)
 		(layer "F.Cu")
 		(net "/USB_DM")
-		(uuid "4e169a75-3934-418e-bfa2-88e0bbe80fee")
+		(uuid "4036628f-2051-4809-afef-a4282cf7f297")
 	)
 	(segment
-		(start 194.5 91.25)
+		(start 194.8 91.25)
 		(end 195.955 91.25)
 		(width 0.25)
 		(layer "F.Cu")
 		(net "/USB_DM")
-		(uuid "55756840-6851-42a0-a566-127a81208d93")
+		(uuid "4f909aca-bea1-41fe-8fa1-a78c5a9ace07")
 	)
 	(segment
-		(start 194 90.25)
-		(end 193.75 90.5)
+		(start 194.75 90.25)
+		(end 194.6 90.4)
 		(width 0.25)
 		(layer "F.Cu")
 		(net "/USB_DM")
-		(uuid "6cec4719-4e44-4ec0-97fb-fe597f5eda96")
-	)
-	(segment
-		(start 195.955 90.25)
-		(end 194 90.25)
-		(width 0.25)
-		(layer "F.Cu")
-		(net "/USB_DM")
-		(uuid "6f55f0c4-24c8-47a3-936e-b9c5bc7aeb31")
+		(uuid "662a0f1e-978c-4149-bfe7-3baa44882fd4")
 	)
 	(segment
 		(start 178.275126 63.5)
@@ -33334,12 +33403,36 @@
 		(uuid "91b8c201-170a-42c9-8fc7-0a2efece9b39")
 	)
 	(segment
+		(start 195.955 90.25)
+		(end 194.75 90.25)
+		(width 0.25)
+		(layer "F.Cu")
+		(net "/USB_DM")
+		(uuid "97691bde-ba7d-4e7f-8d80-1e0da9ea6696")
+	)
+	(segment
 		(start 177.275394 64.499732)
 		(end 178.275126 63.5)
 		(width 0.25)
 		(layer "F.Cu")
 		(net "/USB_DM")
 		(uuid "ac57682d-0416-4b6b-89fb-24ff03652ab0")
+	)
+	(segment
+		(start 194.6 90.4)
+		(end 194.6 91.05)
+		(width 0.25)
+		(layer "F.Cu")
+		(net "/USB_DM")
+		(uuid "b1329bb1-5061-4c25-bb7d-c806f24cfad2")
+	)
+	(segment
+		(start 194.6 91.05)
+		(end 194.8 91.25)
+		(width 0.25)
+		(layer "F.Cu")
+		(net "/USB_DM")
+		(uuid "f4ce29d1-7c05-4ad6-877d-f98e776a2cb4")
 	)
 	(via
 		(at 190.75 90.5)

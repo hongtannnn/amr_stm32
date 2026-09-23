@@ -63,10 +63,10 @@
           "min_clearance": 0.25,
           "min_island_area": 10.0,
           "min_thickness": 0.2,
-          "pad_connection": 1,
+          "pad_connection": 2,
           "remove_islands": 0,
-          "thermal_relief_gap": 0.8,
-          "thermal_relief_spoke_width": 0.8
+          "thermal_relief_gap": 0.5,
+          "thermal_relief_spoke_width": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -107,22 +107,6 @@
         ],
         [
           "silk_edge_clearance|142810000|106000000|c7563840-0998-486f-8bce-d4a214de040f|28b332bb-4161-4487-b213-0b90d43376db",
-          ""
-        ],
-        [
-          "silk_overlap|163097676|64148804|8f375f4e-634b-4c9d-948a-a4e1d06c658d|f6d245e7-6dcb-46e7-ba40-60327cb7e461",
-          ""
-        ],
-        [
-          "silk_overlap|163097676|64148804|cb7760df-407d-48a0-9ccd-62b03ca96c53|f6d245e7-6dcb-46e7-ba40-60327cb7e461",
-          ""
-        ],
-        [
-          "silk_overlap|163179200|64031300|05f625dd-1131-4450-be8e-8c329a942391|8f375f4e-634b-4c9d-948a-a4e1d06c658d",
-          ""
-        ],
-        [
-          "silk_overlap|163179200|64031300|05f625dd-1131-4450-be8e-8c329a942391|cb7760df-407d-48a0-9ccd-62b03ca96c53",
           ""
         ],
         [
