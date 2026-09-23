@@ -60,13 +60,13 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.2,
+          "min_clearance": 0.25,
           "min_island_area": 10.0,
           "min_thickness": 0.2,
-          "pad_connection": 2,
+          "pad_connection": 1,
           "remove_islands": 0,
-          "thermal_relief_gap": 0.5,
-          "thermal_relief_spoke_width": 0.5
+          "thermal_relief_gap": 0.8,
+          "thermal_relief_spoke_width": 0.8
         }
       },
       "diff_pair_dimensions": [
@@ -107,34 +107,6 @@
         ],
         [
           "silk_edge_clearance|142810000|106000000|c7563840-0998-486f-8bce-d4a214de040f|28b332bb-4161-4487-b213-0b90d43376db",
-          ""
-        ],
-        [
-          "silk_edge_clearance|204250000|73510000|ce2f2856-815e-479d-8df5-3585f72b47b7|db92f3e0-043e-4f32-8eae-35d14e49d172",
-          ""
-        ],
-        [
-          "silk_edge_clearance|204250000|76050000|ce2f2856-815e-479d-8df5-3585f72b47b7|584fb869-ac0f-425a-9b21-9b63456b2348",
-          ""
-        ],
-        [
-          "silk_edge_clearance|204250000|76910000|ce2f2856-815e-479d-8df5-3585f72b47b7|68d02540-ec4e-4a03-bf2c-2d7e2232caa4",
-          ""
-        ],
-        [
-          "silk_edge_clearance|204250000|78590000|ce2f2856-815e-479d-8df5-3585f72b47b7|c14f2f34-890e-4c5c-9f67-73813d914484",
-          ""
-        ],
-        [
-          "silk_edge_clearance|204250000|79450000|ce2f2856-815e-479d-8df5-3585f72b47b7|fca78a19-f58c-45c6-9647-ad07407e45e7",
-          ""
-        ],
-        [
-          "silk_edge_clearance|204250000|81130000|ce2f2856-815e-479d-8df5-3585f72b47b7|5438b188-2191-4057-843b-6cf3e5f52715",
-          ""
-        ],
-        [
-          "silk_edge_clearance|204250000|81990000|ce2f2856-815e-479d-8df5-3585f72b47b7|85c2ae08-ab8b-45be-9a10-850764840684",
           ""
         ],
         [
@@ -796,7 +768,7 @@
         "uuid": "cf072b7b-77da-4611-a2b1-45164595d9a3"
       }
     ],
-    "used_designators": "",
+    "used_designators": "U1",
     "variants": []
   },
   "sheets": [

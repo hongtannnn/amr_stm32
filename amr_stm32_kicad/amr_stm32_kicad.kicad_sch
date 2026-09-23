@@ -7720,7 +7720,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Regulator_Linear:AP2112K-3.3"
+		(symbol "Regulator_Linear:AP2204R-3.3"
 			(pin_names
 				(offset 0.254)
 			)
@@ -7730,7 +7730,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
-				(at -5.08 5.715 0)
+				(at -5.08 3.175 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -7740,19 +7740,30 @@
 					(justify left)
 				)
 			)
-			(property "Value" "AP2112K-3.3"
+			(property "Value" "AP2204R-3.3"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-89-3"
 				(at 0 5.715 0)
 				(show_name no)
 				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-				(at 0 8.255 0)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/products_inactive_data/AP2204.pdf"
+				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -7762,18 +7773,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2112.pdf"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5"
+			(property "Description" "150mA low dropout linear regulator, wide input voltage range, 3.3V fixed positive output, SOT-89-3 package"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -7795,7 +7795,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "SOT?23?5*"
+			(property "ki_fp_filters" "SOT?89*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -7806,9 +7806,9 @@
 					)
 				)
 			)
-			(symbol "AP2112K-3.3_0_1"
+			(symbol "AP2204R-3.3_0_1"
 				(rectangle
-					(start -5.08 4.445)
+					(start -5.08 1.905)
 					(end 5.08 -5.08)
 					(stroke
 						(width 0.254)
@@ -7819,9 +7819,9 @@
 					)
 				)
 			)
-			(symbol "AP2112K-3.3_1_1"
+			(symbol "AP2204R-3.3_1_1"
 				(pin power_in line
-					(at -7.62 2.54 0)
+					(at -7.62 0 0)
 					(length 2.54)
 					(name "VIN"
 						(effects
@@ -7856,45 +7856,8 @@
 						)
 					)
 				)
-				(pin input line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "EN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 5.08 0 180)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin power_out line
-					(at 7.62 2.54 180)
+					(at 7.62 0 180)
 					(length 2.54)
 					(name "VOUT"
 						(effects
@@ -7903,7 +7866,7 @@
 							)
 						)
 					)
-					(number "5"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -9705,12 +9668,6 @@
 		(uuid "81b116e6-48dc-4fc5-b051-f701b90a633a")
 	)
 	(junction
-		(at 55.88 119.38)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8406f147-a9e8-4cf1-b360-242a2ab45060")
-	)
-	(junction
 		(at 293.37 26.67)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9921,6 +9878,12 @@
 		(uuid "c417f9bb-efb2-48c9-816f-4c3e27c677e0")
 	)
 	(junction
+		(at 67.31 133.35)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c79b4b66-f35a-4da1-bb57-7b30236eda50")
+	)
+	(junction
 		(at 393.7 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9949,12 +9912,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d64c5648-03d6-4e6c-91a3-fd259f6068a2")
-	)
-	(junction
-		(at 68.58 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dd6ead49-a49b-494d-8154-a8f26fe75dd2")
 	)
 	(junction
 		(at 171.45 63.5)
@@ -10360,16 +10317,6 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 133.35) (xy 68.58 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1103f320-4e50-4370-a181-f260ec8ae9db")
-	)
-	(wire
-		(pts
 			(xy 458.47 48.26) (xy 454.66 48.26)
 		)
 		(stroke
@@ -10577,16 +10524,6 @@
 			(type default)
 		)
 		(uuid "1f4e058d-f4f4-466b-bd39-96aea7e392e3")
-	)
-	(wire
-		(pts
-			(xy 55.88 121.92) (xy 60.96 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1fb5e50a-19b4-4a87-9214-838ada11a962")
 	)
 	(wire
 		(pts
@@ -10800,6 +10737,16 @@
 	)
 	(wire
 		(pts
+			(xy 67.31 127) (xy 67.31 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c6365ca-2f56-41cd-9961-f17a3fba9072")
+	)
+	(wire
+		(pts
 			(xy 222.25 260.35) (xy 222.25 273.05)
 		)
 		(stroke
@@ -10837,16 +10784,6 @@
 			(type default)
 		)
 		(uuid "2e47e85c-1b05-4828-97e5-baaa01bd29a7")
-	)
-	(wire
-		(pts
-			(xy 76.2 119.38) (xy 81.28 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2e792db7-a3f3-4c1b-9a3d-1d4ef6f2983b")
 	)
 	(wire
 		(pts
@@ -11230,6 +11167,16 @@
 	)
 	(wire
 		(pts
+			(xy 74.93 119.38) (xy 81.28 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41fd3a84-32c6-4547-b56d-1c68911732dd")
+	)
+	(wire
+		(pts
 			(xy 293.37 55.88) (xy 293.37 57.15)
 		)
 		(stroke
@@ -11407,16 +11354,6 @@
 			(type default)
 		)
 		(uuid "4dc8d7e9-9f3f-48f0-b4a9-673f90922948")
-	)
-	(wire
-		(pts
-			(xy 55.88 119.38) (xy 60.96 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4e662f34-2035-4651-847b-925df04d4f42")
 	)
 	(wire
 		(pts
@@ -11707,6 +11644,16 @@
 			(type default)
 		)
 		(uuid "5c43628f-672d-424e-9415-43bcfaa9c042")
+	)
+	(wire
+		(pts
+			(xy 67.31 133.35) (xy 81.28 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ca23829-bce4-483e-bb25-7efd2296ec03")
 	)
 	(wire
 		(pts
@@ -12070,7 +12017,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 133.35) (xy 81.28 133.35)
+			(xy 60.96 133.35) (xy 67.31 133.35)
 		)
 		(stroke
 			(width 0)
@@ -12427,16 +12374,6 @@
 			(type default)
 		)
 		(uuid "867e5ced-7cba-41f3-84c3-86bdc988a461")
-	)
-	(wire
-		(pts
-			(xy 55.88 119.38) (xy 55.88 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "86ca849a-50de-4b47-8a47-a44735c337b5")
 	)
 	(wire
 		(pts
@@ -12987,16 +12924,6 @@
 			(type default)
 		)
 		(uuid "a06d9968-0bf4-41d1-ab34-fa44f1736c52")
-	)
-	(wire
-		(pts
-			(xy 60.96 133.35) (xy 68.58 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a175aa63-3ad5-40e9-8f8c-8b76127fc4d3")
 	)
 	(wire
 		(pts
@@ -13560,7 +13487,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 119.38) (xy 55.88 119.38)
+			(xy 49.53 119.38) (xy 59.69 119.38)
 		)
 		(stroke
 			(width 0)
@@ -14928,7 +14855,7 @@
 		)
 		(uuid "49338ccd-d060-4e11-9e9d-b168ab4a7754")
 	)
-	(label "+12V_BAT"
+	(label "GND"
 		(at 49.53 77.47 0)
 		(effects
 			(font
@@ -15148,7 +15075,7 @@
 		)
 		(uuid "6329d525-07e0-4648-be9e-b24948a282a0")
 	)
-	(label "GND"
+	(label "+12V_BAT"
 		(at 49.53 74.93 0)
 		(effects
 			(font
@@ -18831,6 +18758,89 @@
 		)
 	)
 	(symbol
+		(lib_id "Regulator_Linear:AP2204R-3.3")
+		(at 67.31 119.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "30869e80-fa06-4312-ab99-6b3dba3f7597")
+		(property "Reference" "U1"
+			(at 67.31 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SGM2205_3.3"
+			(at 67.31 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+			(at 67.31 113.665 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/products_inactive_data/AP2204.pdf"
+			(at 67.31 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "150mA low dropout linear regulator, wide input voltage range, 3.3V fixed positive output, SOT-89-3 package"
+			(at 67.31 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "b91f9510-361b-41a3-8524-dfd17a3aca0f")
+		)
+		(pin "1"
+			(uuid "146b93a6-34de-44ef-8e84-510c8bab33c1")
+		)
+		(pin "3"
+			(uuid "e854dd66-8f05-4a31-9440-e1a40ea6818b")
+		)
+		(instances
+			(project "amr_stm32_kicad"
+				(path "/cf072b7b-77da-4611-a2b1-45164595d9a3"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 83.82 52.07 90)
 		(unit 1)
@@ -21753,95 +21763,6 @@
 			(project "amr_stm32_kicad"
 				(path "/cf072b7b-77da-4611-a2b1-45164595d9a3"
 					(reference "R5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Regulator_Linear:AP2112K-3.3")
-		(at 68.58 121.92 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6ced5bc8-467e-4ce2-97b3-35ed0e286ac9")
-		(property "Reference" "U2"
-			(at 68.58 113.03 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "AP2112K-3.3"
-			(at 68.58 115.57 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 68.58 113.665 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2112.pdf"
-			(at 68.58 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5"
-			(at 68.58 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "e2bffaf3-2511-4dd1-80dd-faa6c068577c")
-		)
-		(pin "1"
-			(uuid "4776e507-1d63-4776-8488-4489f6f57dec")
-		)
-		(pin "2"
-			(uuid "5e43b8e4-7424-4429-8440-d901f224aff9")
-		)
-		(pin "5"
-			(uuid "e965d787-2b67-46d7-9e3e-cfc0177dfd2a")
-		)
-		(pin "4"
-			(uuid "71b8b4b0-df73-4756-82ad-8b19480a87dd")
-		)
-		(instances
-			(project "amr_stm32_kicad"
-				(path "/cf072b7b-77da-4611-a2b1-45164595d9a3"
-					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -25498,7 +25419,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "bba89359-47ee-445f-965b-eea07e270112")
 		(property "Reference" "D3"
 			(at 106.68 126.0474 90)
