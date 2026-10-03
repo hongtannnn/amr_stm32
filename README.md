@@ -11,21 +11,26 @@ A low-level controller board and hardware system designed as the foundation for 
 ![AMR STM32 3D Render](amr_stm32f405rgt6_pcb.jpg)
 *Completed PCB design featuring peripheral connectors, power supply block, and central microcontroller.*
 
+## 📸 Real Board (v1.0)
+
+![AMR STM32 Real Board](amr_v1.jpg)
+*Actual manufactured PCB (AMR v1.0) showing the bare board layout and silkscreen.*
+
 ## 🚀 Hardware Features
 
-*   **Central Microcontroller (MCU):** Utilizes the **STM32F405RGT6** chip, providing powerful processing capabilities for PID algorithms, high-speed encoder reading, and peripheral communication.
-*   **Industrial-grade Design:** 4-layer layout with dedicated GND and Power (VCC) planes, ensuring Signal Integrity and Electromagnetic Interference (EMI) reduction when operating in environments with electrical motors.
-*   **Communication & Peripherals:** 
+-   **Central Microcontroller (MCU):** Utilizes the **STM32F405RGT6** chip, providing powerful processing capabilities for PID algorithms, high-speed encoder reading, and peripheral communication.
+-   **Industrial-grade Design:** 4-layer layout with dedicated GND and Power (VCC) planes, ensuring Signal Integrity and Electromagnetic Interference (EMI) reduction when operating in environments with electrical motors.
+-   **Communication & Peripherals:** 
     *   USB Type-C/Micro port for flashing code and debugging.
     *   Standard headers (2.54mm) for I2C, SPI, and UART expansion to communicate with a Raspberry Pi / Jetson Nano or IMU/LiDAR sensors.
     *   JST jacks and Terminal Blocks for safe power supply and motor control connections.
-*   **Power Circuit:** Integrated voltage regulator block, high-capacity filter capacitors, and protection circuits, ensuring stable voltage for the MCU and logic modules.
+-   **Power Circuit:** Integrated voltage regulator block, high-capacity filter capacitors, and protection circuits, ensuring stable voltage for the MCU and logic modules.
 
 ## 🛠 Tools & Software
 
-*   **Hardware Design (EDA):** KiCad
-*   **Embedded Programming:** STM32CubeIDE / STM32CubeMX
-*   **Mechanical Design (CAD):** Autodesk Fusion 360
+-   **Hardware Design (EDA):** KiCad
+-   **Embedded Programming:** STM32CubeIDE / STM32CubeMX
+-   **Mechanical Design (CAD):** Autodesk Fusion 360
 
 ## 🎯 Future Roadmap
 
