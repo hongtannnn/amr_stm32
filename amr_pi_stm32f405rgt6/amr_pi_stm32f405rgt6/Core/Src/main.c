@@ -19,11 +19,13 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "adc.h"
+#include "spi.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "spi.h"
+#include "gpio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -33,7 +35,13 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+// Định nghĩa thanh ghi cơ bản của BMI323
+#define BMI323_CHIP_ID_REG      0x00
+#define BMI323_ACCEL_X_L_REG    0x03
 
+// Macro điều khiển chân CS (Chân PD2)
+#define BMI323_CS_LOW()         HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_RESET)
+#define BMI323_CS_HIGH()        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_SET)
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -55,7 +63,33 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+/**
+  * @brief Hàm đọc nhiều thanh ghi từ BMI323 qua SPI
+  */
+void BMI323_ReadRegisters(uint8_t regAddr, uint8_t *pData, uint16_t size)
+{
+    uint8_t txBuf[2];
+    // Giao thức SPI của Bosch: Bit MSB của địa chỉ phải là 1 để báo hiệu lệnh Đọc (Read = 0x80)
+    txBuf[0] = regAddr | 0x80;
+    // Giao thức SPI của Bosch yêu cầu 1 byte dummy trống sau byte địa chỉ
+    txBuf[1] = 0x00;
 
+    BMI323_CS_LOW();
+
+    // Gửi byte địa chỉ và byte dummy
+    HAL_SPI_Transmit(&hspi1, txBuf, 2, HAL_MAX_DELAY);
+
+    // Nhận dữ liệu thực tế
+    HAL_SPI_Receive(&hspi1, pData, size, HAL_MAX_DELAY);
+
+    BMI323_CS_HIGH();
+}
+
+// Biến toàn cục lưu trữ dữ liệu
+int16_t accel_x, accel_y, accel_z;
+int16_t gyro_x, gyro_y, gyro_z;
+uint8_t rawData[12];
+uint8_t chipID;
 /* USER CODE END 0 */
 
 /**
@@ -88,19 +122,73 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_ADC1_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
+    // Kéo chân CS lên mức cao để mặc định không chọn chip
+    BMI323_CS_HIGH();
+    HAL_Delay(100);
 
-  /* USER CODE END 2 */
+    // Kiểm tra kết nối (Chip ID của BMI323 thường trả về 0x43)
+    BMI323_ReadRegisters(BMI323_CHIP_ID_REG, &chipID, 1);
 
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-    /* USER CODE END WHILE */
+    // Khai báo biến lưu mốc thời gian và thứ tự đèn
+    uint32_t last_blink_time = HAL_GetTick();
+    uint8_t led_step = 0;
+    /* USER CODE END 2 */
 
-    /* USER CODE BEGIN 3 */
-  }
-  /* USER CODE END 3 */
+    /* Infinite loop */
+    /* USER CODE BEGIN WHILE */
+    while (1)
+    {
+      // Đọc liên tục 12 bytes bắt đầu từ thanh ghi 0x03 (chứa cả Accel 6 bytes và Gyro 6 bytes)
+      BMI323_ReadRegisters(BMI323_ACCEL_X_L_REG, rawData, 12);
+
+      // Nối 2 byte 8-bit lại thành dữ liệu 16-bit có dấu
+      accel_x = (int16_t)((rawData[1] << 8) | rawData[0]);
+      accel_y = (int16_t)((rawData[3] << 8) | rawData[2]);
+      accel_z = (int16_t)((rawData[5] << 8) | rawData[4]);
+
+      gyro_x  = (int16_t)((rawData[7] << 8) | rawData[6]);
+      gyro_y  = (int16_t)((rawData[9] << 8) | rawData[8]);
+      gyro_z  = (int16_t)((rawData[11] << 8) | rawData[10]);
+
+      // Kiểm tra nếu đã trôi qua 300ms thì chuyển sang đèn tiếp theo
+      if (HAL_GetTick() - last_blink_time >= 300)
+      {
+          // BƯỚC 1: Tắt tất cả 3 đèn
+          HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, GPIO_PIN_RESET);
+          HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET);
+          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
+
+          // BƯỚC 2: Bật 1 đèn duy nhất theo thứ tự của led_step
+          switch (led_step) {
+              case 0:
+                  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, GPIO_PIN_SET);
+                  break;
+              case 1:
+                  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);
+                  break;
+              case 2:
+                  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+                  break;
+          }
+
+          // BƯỚC 3: Tăng thứ tự đèn lên 1. Nếu vượt quá đèn số 3 (index 2) thì quay lại từ đầu
+          led_step++;
+          if (led_step > 2) {
+              led_step = 0;
+          }
+
+          // Cập nhật lại mốc thời gian
+          last_blink_time = HAL_GetTick();
+      }
+
+      HAL_Delay(10); // Tốc độ lấy mẫu tương đối 100Hz của cảm biến
+      /* USER CODE END WHILE */
+
+      /* USER CODE BEGIN 3 */
+    }
+    /* USER CODE END 3 */
 }
 
 /**

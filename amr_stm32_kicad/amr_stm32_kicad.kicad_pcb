@@ -20595,7 +20595,7 @@
 				)
 			)
 		)
-		(property "Value" "LM358"
+		(property "Value" "LMV358"
 			(at 0 3.4 0)
 			(layer "F.Fab")
 			(uuid "f712538c-7f0b-4925-b3cc-f30087895227")

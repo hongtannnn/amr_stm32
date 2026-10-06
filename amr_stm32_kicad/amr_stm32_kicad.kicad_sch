@@ -20059,7 +20059,7 @@
 				)
 			)
 		)
-		(property "Value" "LM358"
+		(property "Value" "LMV358"
 			(at 54.61 274.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20069,7 +20069,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 54.61 281.94 0)
 			(hide yes)
 			(show_name no)
@@ -20475,7 +20475,7 @@
 				)
 			)
 		)
-		(property "Value" "LM358"
+		(property "Value" "LMV358"
 			(at 113.03 167.64 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22932,7 +22932,7 @@
 				)
 			)
 		)
-		(property "Value" "LM358"
+		(property "Value" "LMV358"
 			(at 53.34 170.18 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22942,7 +22942,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 53.34 170.18 0)
 			(hide yes)
 			(show_name no)

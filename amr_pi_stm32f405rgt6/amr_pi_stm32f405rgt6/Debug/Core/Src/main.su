@@ -1,0 +1,4 @@
+../Core/Src/main.c:69:6:BMI323_ReadRegisters	24	static
+../Core/Src/main.c:99:5:main	16	static
+../Core/Src/main.c:198:6:SystemClock_Config	88	static
+../Core/Src/main.c:243:6:Error_Handler	4	static,ignoring_inline_asm
