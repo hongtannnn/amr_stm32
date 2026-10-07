@@ -6,15 +6,12 @@
 
 A low-level controller board and hardware system designed as the foundation for an Autonomous Mobile Robot (AMR). The project focuses on real-time task processing, sensor communication, and motor control in preparation for future integration with ROS 2, SLAM algorithms, and autonomous navigation.
 
-## 📸 3D Render
+## 📸 Board Preview
 
-![AMR STM32 3D Render](amr_stm32f405rgt6_pcb.jpg)
-*Completed PCB design featuring peripheral connectors, power supply block, and central microcontroller.*
-
-## 📸 Real Board (v1.0)
-
-![AMR STM32 Real Board](amr_v1.jpg)
-*Actual manufactured PCB (AMR v1.0) showing the bare board layout and silkscreen.*
+| 3D Render | Real Board (Assembled) |
+| :---: | :---: |
+| <img src="amr_stm32f405rgt6_pcb.jpg" alt="AMR STM32 3D Render" width="400"/> | <img src="amr_board.jpg" alt="AMR STM32 Real Board" width="400"/> |
+| *Completed PCB design featuring peripheral connectors, power supply block, and central microcontroller.* | *Actual assembled PCB (AMR v1.0) with all components soldered and ready for testing.* |
 
 ## 🚀 Hardware Features
 
