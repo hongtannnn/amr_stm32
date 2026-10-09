@@ -76,42 +76,6 @@ int main(void)
     {
         // Cập nhật dữ liệu từ cảm biến
         IMU_Read_Data();
-
-        int16_t tilt_value = acc_raw[1];
-
-        // Tách riêng 2 ngưỡng để dễ bù trừ sai số vật lý.
-        // Tăng trị tuyệt đối của 2 số này lên để nới rộng vùng "Ở GIỮA".
-        int16_t threshold_right = 8000;  // Nghiêng phải vượt quá 8000 mới sáng
-        int16_t threshold_left  = -6000; // Nghiêng trái vượt quá -8000 mới sáng
-
-        /* MẸO:
-         * Nếu khi đặt mạch nằm ngang hoàn toàn mà tilt_value hiển thị là -2000 (do hàn lệch),
-         * vùng giữa đang bị lệch sang trái.
-         * Khi đó hãy chỉnh lại: threshold_left = -10000 và threshold_right = 6000 để cân bằng.
-         */
-
-        // Tắt toàn bộ LED trước
-        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
-
-        // Xét điều kiện mới
-        if (tilt_value > threshold_right)
-        {
-            // Cảm biến nghiêng phải -> Sáng LED PC4
-            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, GPIO_PIN_SET);
-        }
-        else if (tilt_value < threshold_left)
-        {
-            // Cảm biến nghiêng trái -> Sáng LED PB0
-            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
-        }
-        else
-        {
-            // Nằm ngang (khoảng ở giữa đã được mở rộng) -> Sáng LED PC5
-            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);
-        }
-
         // Chờ 10ms
         HAL_Delay(10);
 

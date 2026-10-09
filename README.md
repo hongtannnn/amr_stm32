@@ -8,10 +8,10 @@ A low-level controller board and hardware system designed as the foundation for 
 
 ## 📸 Board Preview
 
-| 3D Render | Real Board (Assembled) |
-| :---: | :---: |
-| <img src="amr_stm32f405rgt6_pcb.jpg" alt="AMR STM32 3D Render" width="400"/> | <img src="amr_board.jpg" alt="AMR STM32 Real Board" width="400"/> |
-| *Completed PCB design featuring peripheral connectors, power supply block, and central microcontroller.* | *Actual assembled PCB (AMR v1.0) with all components soldered and ready for testing.* |
+| 3D Render | Bare PCB (Unassembled) | Real Board (Assembled) |
+| :---: | :---: | :---: |
+| <img src="amr_stm32f405rgt6_pcb.jpg" alt="AMR STM32 3D Render" width="300"/> | <img src="amr_v1.jpg" alt="AMR STM32 Bare PCB" width="300"/> | <img src="amr_board.jpg" alt="AMR STM32 Real Board" width="300"/> |
+| *Completed PCB design featuring peripheral connectors, power supply block, and central microcontroller.* | *Newly fabricated AMR v1.0 bare board, showing silkscreen details and routing before component assembly.* | *Actual assembled PCB (AMR v1.0) with all components soldered and ready for testing.* |
 
 ## 🚀 Hardware Features
 
