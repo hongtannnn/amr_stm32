@@ -1,0 +1,3 @@
+../Core/Src/sensor_encoder.c:10:6:Encoder_Init	1
+../Core/Src/sensor_encoder.c:17:6:Encoder_Update	1
+../Core/Src/sensor_encoder.c:33:6:Encoder_Reset	1

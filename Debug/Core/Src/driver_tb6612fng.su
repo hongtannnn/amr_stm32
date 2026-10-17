@@ -1,0 +1,3 @@
+../Core/Src/driver_tb6612fng.c:7:6:Motor_Init	8	static
+../Core/Src/driver_tb6612fng.c:14:6:Motor_Run	16	static
+../Core/Src/driver_tb6612fng.c:54:6:Motor_Stop	8	static

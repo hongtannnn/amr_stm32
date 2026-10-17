@@ -1,0 +1,5 @@
+../Core/Src/differential_drive_kinematics.c:10:6:Kinematics_Init	24	static
+../Core/Src/differential_drive_kinematics.c:38:9:Kinematics_VelocityToPWM	24	static
+../Core/Src/differential_drive_kinematics.c:52:6:Kinematics_ComputeTarget	16	static
+../Core/Src/differential_drive_kinematics.c:58:6:Kinematics_UpdateRamp	32	static
+../Core/Src/differential_drive_kinematics.c:101:6:Kinematics_ComputeActual	48	static
