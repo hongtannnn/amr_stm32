@@ -1,0 +1,2 @@
+../Core/Src/motion_control.c:19:6:Motion_Control_Init	1
+../Core/Src/motion_control.c:36:6:Motion_Control_Update	7

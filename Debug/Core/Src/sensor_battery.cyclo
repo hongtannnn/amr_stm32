@@ -1,2 +1,2 @@
-../Core/Src/sensor_battery.c:7:6:Battery_Init	1
-../Core/Src/sensor_battery.c:12:6:Battery_Read	4
+../Core/Src/sensor_battery.c:8:6:Battery_Init	1
+../Core/Src/sensor_battery.c:13:6:Battery_Read	5

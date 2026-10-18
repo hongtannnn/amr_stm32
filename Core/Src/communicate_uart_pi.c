@@ -1,4 +1,5 @@
 #include "communicate_uart_pi.h"
+#include "joystick_dabble.h"
 #include "usart.h"
 #include "differential_drive_kinematics.h"
 #include <string.h>
@@ -128,6 +129,12 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
         }
 
         HAL_UART_Receive_IT(&huart2, &s_rx_byte, 1);
+    }
+
+    if (huart->Instance == USART3) {
+        extern uint8_t joystick_rx_byte;
+        Joystick_Dabble_ProcessByte(joystick_rx_byte);
+        HAL_UART_Receive_IT(&huart3, &joystick_rx_byte, 1);
     }
 }
 

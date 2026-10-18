@@ -1,2 +1,2 @@
-../Core/Src/sensor_battery.c:7:6:Battery_Init	4	static
-../Core/Src/sensor_battery.c:12:6:Battery_Read	16	static
+../Core/Src/sensor_battery.c:8:6:Battery_Init	4	static
+../Core/Src/sensor_battery.c:13:6:Battery_Read	16	static

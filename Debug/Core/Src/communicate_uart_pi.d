@@ -32,7 +32,8 @@ Core/Src/communicate_uart_pi.o: ../Core/Src/communicate_uart_pi.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- ../Core/Inc/usart.h ../Core/Inc/differential_drive_kinematics.h
+ ../Core/Inc/joystick_dabble.h ../Core/Inc/usart.h \
+ ../Core/Inc/differential_drive_kinematics.h
 ../Core/Inc/communicate_uart_pi.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
@@ -67,5 +68,6 @@ Core/Src/communicate_uart_pi.o: ../Core/Src/communicate_uart_pi.c \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
+../Core/Inc/joystick_dabble.h:
 ../Core/Inc/usart.h:
 ../Core/Inc/differential_drive_kinematics.h:

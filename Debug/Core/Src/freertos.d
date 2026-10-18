@@ -48,9 +48,9 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- ../Core/Inc/sensor_battery.h ../Core/Inc/driver_tb6612fng.h \
- ../Core/Inc/sensor_encoder.h ../Core/Inc/differential_drive_kinematics.h \
- ../Core/Inc/pid_controller.h ../Core/Inc/sensor_imu.h
+ ../Core/Inc/sensor_battery.h ../Core/Inc/sensor_encoder.h \
+ ../Core/Inc/sensor_imu.h ../Core/Inc/communicate_uart_pi.h \
+ ../Core/Inc/main.h ../Core/Inc/motion_control.h
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -102,8 +102,8 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
 ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
 ../Core/Inc/sensor_battery.h:
-../Core/Inc/driver_tb6612fng.h:
 ../Core/Inc/sensor_encoder.h:
-../Core/Inc/differential_drive_kinematics.h:
-../Core/Inc/pid_controller.h:
 ../Core/Inc/sensor_imu.h:
+../Core/Inc/communicate_uart_pi.h:
+../Core/Inc/main.h:
+../Core/Inc/motion_control.h:
