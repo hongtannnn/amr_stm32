@@ -20,7 +20,7 @@ typedef struct {
     float    gyro_z;       // dps (hoặc rad/s)
     float    battery_volt; // V
     uint8_t  checksum;
-} CommPi_TelemetryPacket_t;
+} CommunicatePi_TelemetryPacket_t;
 
 typedef struct {
     uint8_t header1;
@@ -30,11 +30,11 @@ typedef struct {
     float   cmd_v;        // m/s
     float   cmd_omega;    // rad/s
     uint8_t checksum;
-} CommPi_CommandPacket_t;
+} CommunicatePi_CommandPacket_t;
 #pragma pack(pop)
 
-void CommPi_Init(void);
-void CommPi_SendTelemetry(int32_t ticks_left, int32_t ticks_right, float gyro_z, float battery_volt);
-void CommPi_CheckTimeout(uint32_t timeout_ms);
+void CommunicatePi_Init(void);
+void CommunicatePi_SendTelemetry(int32_t ticks_left, int32_t ticks_right, float gyro_z, float battery_volt);
+void CommunicatePi_CheckTimeout(uint32_t timeout_ms);
 
 #endif /* COMMUNICATE_UART_PI_H */

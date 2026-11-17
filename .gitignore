@@ -1,0 +1,6 @@
+# STM32CubeIDE build output
+Debug/
+Release/
+
+# Knowledge graph / Agent cache
+graphify-out/

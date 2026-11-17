@@ -27,16 +27,9 @@ extern SPI_HandleTypeDef hspi1;
 // =====================================================================
 // BIẾN TOÀN CỤC
 // =====================================================================
-uint8_t bmi323_chip_id = 0;
-
-volatile int16_t acc_raw[3] = {0, 0, 0};
-volatile int16_t gyr_raw[3] = {0, 0, 0};
-
-volatile float ax_g = 0.0f, ay_g = 0.0f, az_g = 0.0f;
-volatile float gx_dps = 0.0f, gy_dps = 0.0f, gz_dps = 0.0f;
-
-volatile float yaw = 0.0f;
+static uint8_t bmi323_chip_id = 0;
 static float gz_bias = 0.0f;
+volatile float gz_dps = 0.0f;
 
 // =====================================================================
 // HÀM GIAO TIẾP SPI ĐỒNG THỜI (FULL-DUPLEX)
@@ -146,8 +139,8 @@ void IMU_Read_Data(void)
     if (spi_xfer(tx, rx, 14) != 0) return;
 
     // Đọc thô Gyro Z (tọa độ byte 12 và byte 13)
-    gyr_raw[2] = (int16_t)(rx[12] | (rx[13] << 8));
+    int16_t raw_gz = (int16_t)(rx[12] | (rx[13] << 8));
 
     // Quy đổi dps (thang ±2000 dps -> 16.384 LSB/dps) và trừ trôi tĩnh
-    gz_dps = ((float)gyr_raw[2] / 16.384f) - gz_bias;
+    gz_dps = ((float)raw_gz / 16.384f) - gz_bias;
 }

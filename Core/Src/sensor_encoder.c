@@ -16,8 +16,8 @@ void Encoder_Init(void)
 
 void Encoder_Update(void) 
 {
-    uint16_t cur_cnt_right = (uint16_t)__HAL_TIM_GET_COUNTER(&htim5);
-    uint16_t cur_cnt_left = (uint16_t)__HAL_TIM_GET_COUNTER(&htim3);
+    uint16_t cur_cnt_left = (uint16_t)__HAL_TIM_GET_COUNTER(&htim5);
+    uint16_t cur_cnt_right = (uint16_t)__HAL_TIM_GET_COUNTER(&htim3);
 
     // Ép kiểu int16_t tự động xử lý hiện tượng tràn/quay vòng số đếm 16-bit
     int16_t delta_left = (int16_t)(cur_cnt_left - last_cnt_left);
@@ -26,8 +26,8 @@ void Encoder_Update(void)
     last_cnt_left = cur_cnt_left;
     last_cnt_right = cur_cnt_right;
 
-    left_encoder -= delta_left;
-    right_encoder += delta_right;
+    left_encoder += delta_left;
+    right_encoder -= delta_right;
 }
 
 void Encoder_Reset(void) 

@@ -30,6 +30,7 @@
 #include "sensor_imu.h"
 #include "communicate_uart_pi.h"
 #include "motion_control.h"
+#include "driver_tb6612fng.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -49,7 +50,9 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-
+// Kéo symbol vào binary để theo dõi trên Live Expressions
+extern volatile int16_t pwm_left;
+extern volatile int16_t pwm_right;
 /* USER CODE END Variables */
 osThreadId Task1Handle;
 osThreadId Task2Handle;
@@ -134,16 +137,17 @@ void MX_FREERTOS_Init(void) {
   * @retval None
   */
 /* USER CODE END Header_StartTask1 */
+//Da sua
 void StartTask1(void const * argument)
 {
   /* USER CODE BEGIN StartTask1 */
   Motion_Control_Init();
-
   const float dt = 0.005f; // Chu kỳ lấy mẫu 5ms
 
   /* Infinite loop */
   for(;;)
   {
+    // Motion_Control_TestOpenLoop(dt);
     Motion_Control_Update(dt);
     osDelay(5);
   }
@@ -160,13 +164,15 @@ void StartTask1(void const * argument)
 void StartTask2(void const * argument)
 {
   /* USER CODE BEGIN StartTask2 */
-  CommPi_Init();
+  CommunicatePi_Init();
+  uint32_t previous_wake_time = osKernelSysTick();
+
   /* Infinite loop */
   for(;;)
   {
-    CommPi_SendTelemetry(left_encoder, right_encoder, gz_dps, battery_voltage);
-    //CommPi_CheckTimeout(500);
-    osDelay(20);
+    CommunicatePi_SendTelemetry(left_encoder, right_encoder, gz_dps, battery_voltage);
+    //CommunicatePi_CheckTimeout(500);
+    osDelayUntil(&previous_wake_time, 20);
   }
   /* USER CODE END StartTask2 */
 }

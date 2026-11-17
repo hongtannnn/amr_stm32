@@ -6,6 +6,8 @@
 
 /* Cac bien quan sat trang thai (Live Watch / Debug) */
 extern volatile float yaw_correction;
+extern volatile float sync_correction;
+extern volatile int32_t sync_tick_error;
 extern volatile int16_t pwm_left;
 extern volatile int16_t pwm_right;
 
@@ -14,5 +16,6 @@ void Motion_Control_Init(void);
 
 /* Vong lap tinh toan va dieu khien dong co theo chu ky dt (giay) */
 void Motion_Control_Update(float dt);
+void Motion_Control_TestOpenLoop(float dt);
 
 #endif /* MOTION_CONTROL_H */

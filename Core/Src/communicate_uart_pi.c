@@ -1,5 +1,4 @@
 #include "communicate_uart_pi.h"
-#include "joystick_dabble.h"
 #include "usart.h"
 #include "differential_drive_kinematics.h"
 #include <string.h>
@@ -11,10 +10,10 @@ typedef enum {
     RX_STATE_WAIT_LEN,
     RX_STATE_READ_PAYLOAD,
     RX_STATE_WAIT_CHECKSUM
-} CommPi_RxState_t;
+} CommunicatePi_RxState_t;
 
 static uint8_t s_rx_byte = 0;
-static CommPi_RxState_t s_rx_state = RX_STATE_WAIT_HEADER1;
+static CommunicatePi_RxState_t s_rx_state = RX_STATE_WAIT_HEADER1;
 static uint8_t s_payload_idx = 0;
 static uint8_t s_expected_len = 0;
 static uint8_t s_payload_buf[16];
@@ -29,34 +28,40 @@ static uint8_t ComputeChecksum(const uint8_t *data, uint16_t len)
     return sum;
 }
 
-void CommPi_Init(void)
+void CommunicatePi_Init(void)
 {
     s_rx_state = RX_STATE_WAIT_HEADER1;
     s_last_rx_tick = HAL_GetTick();
-    HAL_UART_Receive_IT(&huart2, &s_rx_byte, 1);
+    HAL_UART_Receive_IT(&huart3, &s_rx_byte, 1);
 }
 
-void CommPi_SendTelemetry(int32_t ticks_left, int32_t ticks_right, float gyro_z, float battery_volt)
+void CommunicatePi_SendTelemetry(int32_t ticks_left, int32_t ticks_right, float gyro_z, float battery_volt)
 {
-    CommPi_TelemetryPacket_t pkt;
-    pkt.header1 = COMM_PI_HEADER1;
-    pkt.header2 = COMM_PI_HEADER2;
-    pkt.msg_id = COMM_PI_MSG_TELEMETRY;
-    pkt.payload_len = sizeof(int32_t) * 2 + sizeof(float) * 2;
-    pkt.ticks_left = ticks_left;
-    pkt.ticks_right = ticks_right;
-    pkt.gyro_z = gyro_z;
-    pkt.battery_volt = battery_volt;
+    // Đảm bảo không gọi truyền ngắt mới khi lần truyền trước chưa hoàn tất
+    if (huart3.gState != HAL_UART_STATE_READY) {
+        return;
+    }
+
+    static CommunicatePi_TelemetryPacket_t s_tx_pkt;
+    s_tx_pkt.header1 = COMM_PI_HEADER1;
+    s_tx_pkt.header2 = COMM_PI_HEADER2;
+    s_tx_pkt.msg_id = COMM_PI_MSG_TELEMETRY;
+    s_tx_pkt.payload_len = sizeof(int32_t) * 2 + sizeof(float) * 2;
+    s_tx_pkt.ticks_left = ticks_left;
+    s_tx_pkt.ticks_right = ticks_right;
+    s_tx_pkt.gyro_z = gyro_z;
+    s_tx_pkt.battery_volt = battery_volt;
 
     // Checksum tính từ msg_id đến hết payload
-    uint8_t *p_data = &pkt.msg_id;
-    uint16_t len_to_sum = 1 + 1 + pkt.payload_len;
-    pkt.checksum = ComputeChecksum(p_data, len_to_sum);
+    uint8_t *p_data = &s_tx_pkt.msg_id;
+    uint16_t len_to_sum = 1 + 1 + s_tx_pkt.payload_len;
+    s_tx_pkt.checksum = ComputeChecksum(p_data, len_to_sum);
 
-    HAL_UART_Transmit(&huart2, (uint8_t *)&pkt, sizeof(pkt), 20);
+    // Truyền bằng ngắt (Non-blocking) để không chặn luồng nhận byte lệnh từ Pi
+    HAL_UART_Transmit_IT(&huart3, (uint8_t *)&s_tx_pkt, sizeof(s_tx_pkt));
 }
 
-void CommPi_CheckTimeout(uint32_t timeout_ms)
+void CommunicatePi_CheckTimeout(uint32_t timeout_ms)
 {
     // Ngắt an toàn: dừng robot nếu mất kết nối lệnh từ Pi quá thời gian quy định
     if ((HAL_GetTick() - s_last_rx_tick) > timeout_ms) {
@@ -66,7 +71,7 @@ void CommPi_CheckTimeout(uint32_t timeout_ms)
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-    if (huart->Instance == USART2) {
+    if (huart->Instance == USART3) {
         switch (s_rx_state) {
             case RX_STATE_WAIT_HEADER1:
                 if (s_rx_byte == COMM_PI_HEADER1) {
@@ -128,22 +133,18 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
                 break;
         }
 
-        HAL_UART_Receive_IT(&huart2, &s_rx_byte, 1);
-    }
-
-    if (huart->Instance == USART3) {
-        extern uint8_t joystick_rx_byte;
-        Joystick_Dabble_ProcessByte(joystick_rx_byte);
-        HAL_UART_Receive_IT(&huart3, &joystick_rx_byte, 1);
+        HAL_UART_Receive_IT(&huart3, &s_rx_byte, 1);
     }
 }
 
 void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 {
-    if (huart->Instance == USART2) {
+    if (huart->Instance == USART3) {
         // Xóa cờ lỗi Overrun nếu có và kích hoạt lại ngắt nhận
         __HAL_UART_CLEAR_OREFLAG(huart);
         s_rx_state = RX_STATE_WAIT_HEADER1;
-        HAL_UART_Receive_IT(&huart2, &s_rx_byte, 1);
+        // Giải phóng trạng thái TX bị kẹt (nếu có) trước khi tiếp tục nhận
+        HAL_UART_AbortTransmit(&huart3);
+        HAL_UART_Receive_IT(&huart3, &s_rx_byte, 1);
     }
 }

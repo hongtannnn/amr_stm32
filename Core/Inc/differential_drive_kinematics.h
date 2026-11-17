@@ -7,8 +7,8 @@
 #define ROBOT_WHEEL_RADIUS    0.033f  // Bán kính bánh xe R = 33mm (m)
 #define ROBOT_MAX_LINEAR_VEL     0.515f  // Vận tốc dài tối đa mặc định V_max = 515mm/s (m/s)
 #define ROBOT_TICKS_PER_REV      1980.0f // Số xung encoder trên một vòng quay bánh xe
-#define ROBOT_MAX_ACCEL_LINEAR   1.0f    // Gia tốc dài tối đa (m/s^2)
-#define ROBOT_MAX_ACCEL_ANGULAR  3.0f    // Gia tốc góc tối đa (rad/s^2)
+#define ROBOT_MAX_ACCEL_LINEAR   0.2f    // Gia tốc dài tối đa (m/s^2)
+#define ROBOT_MAX_ACCEL_ANGULAR  0.5f    // Gia tốc góc tối đa (rad/s^2)
 
 typedef struct {
     float wheel_base;          // L (m)

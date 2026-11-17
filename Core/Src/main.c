@@ -105,12 +105,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
     while (1)
     {
-        // Cập nhật dữ liệu từ cảm biến
-        //IMU_Read_Data();
-        //Motor_Run(500, -500);
-        // Chờ 10ms
-        HAL_Delay(10);
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

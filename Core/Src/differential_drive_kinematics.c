@@ -14,7 +14,7 @@ void Kinematics_Init(float wheel_base, float wheel_radius, float max_linear_vel)
     g_kinematics.max_linear_vel = max_linear_vel;
 
     g_kinematics.cmd_v = 0.0f;
-    g_kinematics.cmd_omega = 0.0f;
+    g_kinematics.cmd_omega = -0.0f;
     g_kinematics.target_v = 0.0f;
     g_kinematics.target_omega = 0.0f;
     g_kinematics.target_v_left = 0.0f;

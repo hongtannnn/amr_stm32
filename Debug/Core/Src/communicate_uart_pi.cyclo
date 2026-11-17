@@ -1,6 +1,0 @@
-../Core/Src/communicate_uart_pi.c:23:16:ComputeChecksum	2
-../Core/Src/communicate_uart_pi.c:32:6:CommPi_Init	1
-../Core/Src/communicate_uart_pi.c:39:6:CommPi_SendTelemetry	1
-../Core/Src/communicate_uart_pi.c:59:6:CommPi_CheckTimeout	2
-../Core/Src/communicate_uart_pi.c:67:6:HAL_UART_RxCpltCallback	16
-../Core/Src/communicate_uart_pi.c:141:6:HAL_UART_ErrorCallback	2

@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Kiro processes Antigravity task",
+  "description": "When Antigravity writes a task to .agents/kiro/task.md, Kiro automatically reads it, completes the task, and writes the result to .agents/kiro/result.md",
+  "version": "1.0.0",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      ".agents/kiro/task.md"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Antigravity has written a task in .agents/kiro/task.md. Read that file, complete the task described, then write your full response to .agents/kiro/result.md"
+  }
+}
