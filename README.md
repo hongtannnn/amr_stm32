@@ -13,6 +13,13 @@ A low-level controller board and hardware system designed as the foundation for 
 | <img src="amr_stm32f405rgt6_pcb.jpg" alt="AMR STM32 3D Render" width="300"/> | <img src="amr_v1.jpg" alt="AMR STM32 Bare PCB" width="300"/> | <img src="amr_board.jpg" alt="AMR STM32 Real Board" width="300"/> |
 | *Completed PCB design featuring peripheral connectors, power supply block, and central microcontroller.* | *Newly fabricated AMR v1.0 bare board, showing silkscreen details and routing before component assembly.* | *Actual assembled PCB (AMR v1.0) with all components soldered and ready for testing.* |
 
+## 🗺️ SLAM & Autonomous Navigation
+
+| SLAM Mapping | Autonomous Navigation |
+| :---: | :---: |
+| <img src="mapping.jpg" alt="SLAM mapping result in RViz" width="420"/> | <img src="navigation.jpg" alt="Autonomous navigation in a real indoor environment" width="320"/> |
+| *2D occupancy grid map built from LiDAR scans, visualized in RViz with the `map` → `odom` → `base_link` TF tree.* | *Real-world test: the robot navigates among obstacles in an indoor room (top), while RViz shows the costmap, inflation zones and the planned path to the goal pose (bottom).* |
+
 ## 🚀 Hardware Features
 
 -   **Central Microcontroller (MCU):** Utilizes the **STM32F405RGT6** chip, providing powerful processing capabilities for PID algorithms and high-speed encoder reading.
