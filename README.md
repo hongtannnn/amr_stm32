@@ -6,6 +6,12 @@
 
 A low-level controller board and hardware system designed as the foundation for an Autonomous Mobile Robot (AMR). The project focuses on real-time task processing, sensor communication, and motor control in preparation for future integration with ROS 2, SLAM algorithms, and autonomous navigation.
 
+<p align="center">
+  <img src="amr_v1_robot.jpg" alt="AMR v1.0 - Real Robot" width="450"/>
+  <br/>
+  <em>AMR v1.0: the assembled robot with a 2D LiDAR on top, a differential-drive base and a rear caster wheel.</em>
+</p>
+
 ## 📸 Board Preview
 
 | 3D Render | Bare PCB (Unassembled) | Real Board (Assembled) |
