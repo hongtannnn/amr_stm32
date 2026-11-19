@@ -70,18 +70,11 @@ cd ~/robot_amr && source install/setup.bash
 ros2 launch rp_lidar rp_lidar.launch.py
 ```
 
-### Terminal 2 (Trên Laptop): Khởi động thuật toán SLAM vẽ bản đồ
-Tắt RViz của SLAM để tránh mở trùng lặp cửa sổ hiển thị:
+### Terminal 2 (Trên Laptop): Khởi động trọn gói Main (SLAM + Nav2 + Explore + RViz + Pin)
+Lệnh gộp tổng khởi chạy đồng thời thuật toán vẽ map SLAM, điều hướng tự hành, hoa tiêu khám phá và bảng báo pin:
 ```bash
 cd ~/robot_amr && source install/setup.bash
-ros2 launch robot_mapping slam_toolbox.launch.py use_rviz:=false
-```
-
-### Terminal 3 (Trên Laptop): Kích hoạt hoa tiêu tự hành thám hiểm
-Lệnh này sẽ khởi động Nav2 + node `explore_lite` + giao diện RViz điều khiển:
-```bash
-cd ~/robot_amr && source install/setup.bash
-ros2 launch robot_navigation explore.launch.py
+ros2 launch robot_navigation main.launch.py
 ```
 *(Robot sẽ tự động tìm các vùng biên giới sương mù và lăn bánh đi thám hiểm phủ kín phòng).*
 

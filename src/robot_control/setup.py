@@ -25,6 +25,7 @@ setup(
     entry_points={
         'console_scripts': [
             'cmd_vel_relay = robot_control.cmd_vel_relay:main',
+            'battery_overlay_relay = robot_control.battery_overlay_relay:main',
         ],
     },
 )

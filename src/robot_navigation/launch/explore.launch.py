@@ -98,6 +98,14 @@ def generate_launch_description():
         output='screen'
     )
 
+    # 5. Battery Overlay Relay
+    battery_relay_node = Node(
+        package='robot_control',
+        executable='battery_overlay_relay',
+        name='battery_overlay_relay',
+        output='screen',
+    )
+
     return LaunchDescription([
         params_file_arg,
         explore_params_arg,
@@ -109,4 +117,5 @@ def generate_launch_description():
         navigation_launch,
         explore_node,
         rviz_node,
+        battery_relay_node,
     ])
