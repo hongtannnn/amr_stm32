@@ -7,6 +7,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     port = LaunchConfiguration('port')
     baud = LaunchConfiguration('baud')
+    broadcast_tf = LaunchConfiguration('broadcast_tf')
 
     return LaunchDescription([
         DeclareLaunchArgument(
@@ -19,6 +20,11 @@ def generate_launch_description():
             default_value='115200',
             description='Serial baud rate for the wheel encoder controller',
         ),
+        DeclareLaunchArgument(
+            'broadcast_tf',
+            default_value='false',
+            description='Whether to broadcast odom -> base_link TF (set false when using EKF)',
+        ),
         Node(
             package='robot_odom',
             executable='odom_node',
@@ -27,6 +33,7 @@ def generate_launch_description():
             parameters=[{
                 'port': port,
                 'baud': baud,
+                'broadcast_tf': broadcast_tf,
             }],
         ),
     ])

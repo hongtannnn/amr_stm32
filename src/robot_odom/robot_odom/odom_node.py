@@ -47,7 +47,7 @@ class BridgeOdom(Node):
         self.declare_parameter('child_frame_id', 'base_link')
         self.declare_parameter('imu_frame_id', 'imu_link')
         self.declare_parameter('publish_hz', 50.0)
-        self.declare_parameter('broadcast_tf', True)
+        self.declare_parameter('broadcast_tf', False)
         self.declare_parameter('cmd_vel_timeout', 0.5)
 
         self.port = self.get_parameter('port').value
@@ -205,6 +205,8 @@ class BridgeOdom(Node):
         imu_msg.header.stamp = now.to_msg()
         imu_msg.header.frame_id = self.imu_frame_id
         imu_msg.angular_velocity.z = math.radians(gyro_z)
+        # Covariance cho góc quay quanh trục Z (chỉ số 8) để EKF dung hợp
+        imu_msg.angular_velocity_covariance[8] = 0.02
         self.imu_pub.publish(imu_msg)
 
         # 4. Xuất bản thông tin pin (quy đổi % cho pin 3S: 10.5V -> 12.4V)
@@ -250,9 +252,14 @@ class BridgeOdom(Node):
         odom.pose.pose.position.y = self.y
         odom.pose.pose.position.z = 0.0
         odom.pose.pose.orientation = quaternion_from_yaw(self.theta)
+        odom.pose.covariance[0] = 0.01
+        odom.pose.covariance[7] = 0.01
+        odom.pose.covariance[35] = 0.05
         odom.twist.twist.linear.x = distance / dt
         odom.twist.twist.linear.y = 0.0
         odom.twist.twist.angular.z = delta_theta / dt
+        odom.twist.covariance[0] = 0.02
+        odom.twist.covariance[35] = 0.05
         self.odom_pub.publish(odom)
 
         if self.broadcast_tf:
